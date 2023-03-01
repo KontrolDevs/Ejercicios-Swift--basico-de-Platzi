@@ -12,7 +12,7 @@ surveyAnswer = "42"
 //print(surveyAnswer)
 
                                                                                                      
-//EXTRACION FORZADA DE UNA OPCIONAL Force Unwrapping
+                     //FORCE UNWRAPPING - Extraccion forzada de una opcional
 
 if converteAge != nil {
     print("La edad del usuario no es nula: \(converteAge!)")  //Poner una exclamacion (!) en converterAge para forzar la extrancion de la opcional.
@@ -30,7 +30,7 @@ if let actualAnswer = surveyAnswer {
 }
 
 
-//OPCIONAL BINDING
+                    //OPCIONAL BINDING - Extraccion de una opcional
 
 if let firstNumber = Int("4"),
    let secondNumber = Int("42"),
@@ -39,12 +39,32 @@ if let firstNumber = Int("4"),
     }
 
 
-//HACE LO MISMO DE ARRIBA PERO CON EL MAS CODIGO Y MAS DESPERDIDCION DE MEMORIA.
 
 if let firstNumber = Int("4"){
     if let secondNumber = Int("42"){
-        if firstNumber < secondNumber && secondNumber<100 {
+        if firstNumber < secondNumber && secondNumber<100 {       //HACE LO MISMO QUE LA DE ARRIBA 👆 PERO CON MAS CODIGO Y MAS DESPERDICIO DE MEMORIA.
             print("\(firstNumber) < \(secondNumber) < 100")
         }
     }
 }
+  
+
+                //UNWRAP - Extraccicon de una opcional implicitamente
+
+let possibleString: String? = "Un string opcional"
+let forcedString: String = possibleString!
+
+let assumedString: String! = "Un string unwrapped de formaimplicita a partir de una opcional"
+let implicitString:String = assumedString
+
+if assumedString != nil {
+    print(assumedString!)
+}
+
+if let definitiveString = assumedString {
+    print(definitiveString)
+}
+
+
+print(assumedString)  //Nos da advertinecia por que le falta la exclamacion (!) 
+/* La opcionales con interrogante(?), es declarar una variable que puede ser vacia o nil y una opcional con exclamacion es declarar()! una variable que  nunca va ser nula o nil */
