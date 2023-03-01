@@ -9,7 +9,7 @@
         <page name='Boleanos'/>
         <page name='Tuplas'/>
         <page name='Opcioanles'/>
-        <page name='Uso de try y catch'/>
-        <page name='Untitled Page'/>
+        <page name='Error Handling '/>
+        <page name='Aserciones y precondiciones'/>
     </pages>
 </playground>
